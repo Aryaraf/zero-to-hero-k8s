@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: service-nginx
+  labels:
+    app: service-nginx
+spec:
+  containers:
+  - name: service-nginx
+    image: nginx:alpine
+    resources:
+      limits:
+        cpu: 10m
+        memory: 10Mi
+    ports:
+    - containerPort:  80
+      
